@@ -1,0 +1,1 @@
+C:\Users\prdb\RiderProjects\MobileS4Chemp\MobileS4Chemp\MobileS4Chemp.csproj;x64

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileS4Chemp.WorckMedCartPage">
+    <ContentPage.Content>
+        <VerticalStackLayout>
+            <StackLayout>
+                <Label Text="Пациент:"/>
+                <Picker x:Name="PatientPicker" ItemDisplayBinding="{Binding NamePatient}"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Ивент:"/>
+                <Picker x:Name="EventTipePicker" ItemDisplayBinding="{Binding TipeEvent}"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Доктор:"/>
+                <Picker x:Name="DoctorPicker" ItemDisplayBinding="{Binding NameDoctor}"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Дата ивента:"/>
+                <Entry x:Name="DataEvent"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="имя ивента:"/>
+                <Entry x:Name="NameEvent"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Результат ивента:"/>
+                <Entry x:Name="ResultEvent"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Описание:"/>
+                <Entry x:Name="Opisanie"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Анамнис:"/>
+                <Entry x:Name="AnamEntry"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Симптоматика:"/>
+                <Entry x:Name="SimptEntry"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Диагноз:"/>
+                <Entry x:Name="DiagnEntry"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Рекомендация:"/>
+                <Entry x:Name="RecomendEntry"/>
+            </StackLayout>
+            <Border>
+                <StackLayout>
+                    <VerticalStackLayout>
+                        <StackLayout>
+                            <Label Text="Припорат:"/>
+                            <Entry x:Name="PriporatEntry"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="Дозировка:"/>
+                            <Entry x:Name="DozaEntry"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="Формат:"/>
+                            <Entry x:Name="FormatEntry"/>
+                        </StackLayout>
+                        <Button Text="Добавить" Clicked="AddFromListResept"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout>
+                        <ListView x:Name="ListViewResept">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <VerticalStackLayout>
+                                        <Label Text="{Binding LabelNamePreporat}"/>
+                                        <Label Text="{Binding LabelDoza}"/>
+                                        <Label Text="{Binding LabelFormat}"/>
+                                    </VerticalStackLayout>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </VerticalStackLayout>
+                </StackLayout>
+            </Border>
+            <StackLayout>
+                <Label Text="Консультации:"/>
+                <Entry x:Name="ConsultEntry"/>
+            </StackLayout>
+            <Picker x:Name="PickerIssled" ItemDisplayBinding="{Binding NameIssled}"/>
+            <StackLayout>
+                <Label Text="Процедуры:"/>
+                <Entry x:Name="ProcedureEntry"/>
+            </StackLayout>
+            <StackLayout>
+            </StackLayout>
+            <Button Text="Save" Clicked="SaveButton"/>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>
